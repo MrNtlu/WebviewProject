@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/ana_sayfa"
+        android:id="@+id/main_page"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="@string/kategoriler"
+        android:id="@+id/categories"
+        android:icon="@drawable/ic_apps_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="@string/ayarlar"
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+
+
+
+</menu>
