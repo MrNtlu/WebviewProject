@@ -3,7 +3,4 @@
     <string name="kategoriler">Kategoriler</string>
     <string name="ana_sayfa">Ana Sayfa</string>
     <string name="ayarlar">Ayarlar</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
