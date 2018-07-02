@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             switch (keyCode) {
                 case KeyEvent.KEYCODE_BACK:
-                    if (MainPage.getWebView().canGoBack()) { //If it's possible go back on web
+                    if (MainPage.getWebView().canGoBack()) {
                         MainPage.getWebView().goBack();
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
