@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Categories">
 
-    <TextView
+    <android.support.design.widget.NavigationView
+        android:id="@+id/full_nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="KATEGORILER"
-        android:textSize="40sp"/>
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:layout_marginEnd="-65dp"
+        android:layout_marginRight="-65dp"
+        app:itemTextColor="@color/colorPrimary"
+        app:itemIconTint="@color/colorAccent"
+        app:menu="@menu/navigation_menu"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_categories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/categories_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/categories_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+</RelativeLayout>

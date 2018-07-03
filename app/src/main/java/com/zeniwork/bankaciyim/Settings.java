@@ -29,9 +29,10 @@ public class Settings extends Fragment {
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //TODO CHANGE THEM
         AboutView aboutView = AboutBuilder.with(getContext())
-                .setPhoto(R.mipmap.profile_picture)
-                .setCover(R.mipmap.profile_cover)
+                .setPhoto(R.drawable.bankaciyim_logo)
+                .setCover(R.drawable.banner1)
                 .setName("Bankaciyim.NET")
                 .setSubTitle("Türkiye'nin en büyük bankacı platformu.")
                 .setAppIcon(R.mipmap.ic_launcher)

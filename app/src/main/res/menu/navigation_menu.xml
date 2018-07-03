@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Banka Haberleri"
+        android:id="@+id/bank_news"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Ekonomi"
+        android:id="@+id/economy"
+        android:icon="@drawable/ic_apps_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Kredi Kampanyaları"
+        android:id="@+id/credits"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Kariyer"
+        android:id="@+id/carreer"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Pano"
+        android:id="@+id/pano"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Banka Personel Alımları"
+        android:id="@+id/bank_hire"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Kamu Personel Alımları"
+        android:id="@+id/kamu_hire"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Diğer Personel Alımları"
+        android:id="@+id/other_hire"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"/>
+</menu>

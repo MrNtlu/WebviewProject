@@ -19,6 +19,8 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.onesignal.OneSignal;
 
 import es.dmoral.toasty.Toasty;
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (isNetworkAvailable()){
-                    Toasty.success(context,"Bağlantı Başarılı.",Toast.LENGTH_LONG).show();
+                    Toasty.success(context,"Bağlantı Başarılı.", Toast.LENGTH_LONG).show();
                     return;
                 }
                 else{

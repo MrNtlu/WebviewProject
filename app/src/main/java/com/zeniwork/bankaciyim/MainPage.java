@@ -18,11 +18,15 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 public class MainPage extends Fragment {
 
     private final String web_url="http://www.bankaciyim.net/";
     WebView webView;
+    AdView adView;
     static WebView webViewCopy;
 
     public static MainPage newInstance() {
@@ -38,6 +42,10 @@ public class MainPage extends Fragment {
         return webViewCopy;
     }
 
+    public static void setWeb(String url){
+        webViewCopy.loadUrl(url);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_mainpage_fragment, container, false);
@@ -50,6 +58,9 @@ public class MainPage extends Fragment {
         final SwipeRefreshLayout swipeRefreshLayout=(SwipeRefreshLayout)view.findViewById(R.id.swipeRefreshLayout);
         final ProgressBar progressBar=(ProgressBar)view.findViewById(R.id.progressBar);
         webViewCopy=webView;
+        adView=(AdView)view.findViewById(R.id.adMob);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         webView.getSettings().setJavaScriptEnabled( true );
         webView.getSettings().setDomStorageEnabled(true);
