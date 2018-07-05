@@ -16,7 +16,7 @@ android {
         manifestPlaceholders = [
                 onesignal_app_id: '<>',
                 // Project number pulled from dashboard, local value is ignored.
-                onesignal_google_project_number: '<>']
+                onesignal_google_project_number: '<>'] //TODO ONESIGNAL ADD
         applicationId "com.zeniwork.bankaciyim"
         minSdkVersion 21
         targetSdkVersion 27

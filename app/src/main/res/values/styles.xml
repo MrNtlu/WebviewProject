@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">16sp</item><!-- text size in menu-->
+
+    </style>
+
 </resources>

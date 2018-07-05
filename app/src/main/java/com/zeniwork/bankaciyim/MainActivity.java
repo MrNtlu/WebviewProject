@@ -37,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
                 case KeyEvent.KEYCODE_BACK:
                     if (MainPage.getWebView().canGoBack()) {
                         MainPage.getWebView().goBack();
-                    } else {
+                    }
+                    else if (Categories.getWebView()!=null && Categories.getWebView().canGoBack()){
+                        Categories.getWebView().goBack();
+                    }
+                    else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle("Emin Misiniz?");
                         builder.setMessage("Çıkmak İstiyor Musunuz?");
