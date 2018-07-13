@@ -2,7 +2,7 @@
 
 # Ana Sayfa Link Değiştirme
 
-<a href="http://hizliresim.com/WDgLp4"><img src="http://i.hizliresim.com/WDgLp4.png"></a>
+<a href="https://user-images.githubusercontent.com/25686023/42708450-089716ac-86e6-11e8-92a0-e5fcd5818c01.png"></a>
 
 web_url kısmına websitesi adresi
 
