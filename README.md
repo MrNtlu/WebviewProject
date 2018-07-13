@@ -2,12 +2,12 @@
 
 # Ana Sayfa Link Değiştirme
 
-<a href="https://user-images.githubusercontent.com/25686023/42708450-089716ac-86e6-11e8-92a0-e5fcd5818c01.png"></a>
+![1](https://user-images.githubusercontent.com/25686023/42708450-089716ac-86e6-11e8-92a0-e5fcd5818c01.png)
 
 web_url kısmına websitesi adresi
 
 Kategori Menüsü Değiştirme
-navigation_menu.xml Dosyasından Kategori menüsündeki menüleri değiştirebilirsiniz. Değişiklik yapılacak yer http://prntscr.com/k61efr
+navigation_menu.xml Dosyasından Kategori menüsündeki menüleri değiştirebilirsiniz. Değişiklik yapılacak yer 
 
 Menü arası ayıraç ile
 ```xml
@@ -35,15 +35,25 @@ Menü arası ayıraç olmadan
 Başlık kısmını istediğiniz gibi değiştirin.
 “BURAYA RESIM” yazan kısma drawable dosyasındaki iconun adını yazın.
 
-Categories—http://prntscr.com/k619ku
+Categories
+
+![2](https://user-images.githubusercontent.com/25686023/42708601-7ed5389e-86e6-11e8-938a-bd0201d86296.png)
 
 navigation.menu.xml dosyasından eklemeleri yaptıktan sonra categories.java dosyasındaki resimdeki alanı menü itemlarınıza göre değiştirin. Örneğin:
+
+
+```xml
+
 <item
         android:title=“BAŞLIK”
         android:id="@+id/ID_BURAYA“
         android:icon="@drawable/RESIM”
         app:showAsAction="always"/>
+```
 
+
+```java
 case R.id.ID_BURAYA:
     webviewSetup(“<ISTEDIGINIZ LINK>“);
     break;
+```
