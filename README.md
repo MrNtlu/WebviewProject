@@ -1,7 +1,9 @@
 # WebviewProject
 
-Ana Sayfa Link Değiştirme
-MainPage—http://prntscr.com/k618q4
+# Ana Sayfa Link Değiştirme
+
+<img src="http://prntscr.com/k618q4">
+
 web_url kısmına websitesi adresi
 
 Kategori Menüsü Değiştirme
