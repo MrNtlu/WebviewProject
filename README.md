@@ -2,7 +2,7 @@
 
 # Ana Sayfa Link Değiştirme
 
-<img src="http://i.hizliresim.com/WDgLp4.png">
+<a href="http://hizliresim.com/WDgLp4"><img src="http://i.hizliresim.com/WDgLp4.png"></a>
 
 web_url kısmına websitesi adresi
 
