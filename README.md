@@ -2,7 +2,7 @@
 
 # Ana Sayfa Link Değiştirme
 
-<img src="http://prntscr.com/k618q4">
+<img src="http://i.hizliresim.com/WDgLp4.png">
 
 web_url kısmına websitesi adresi
 
