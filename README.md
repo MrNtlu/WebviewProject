@@ -80,6 +80,10 @@ case R.id.ID_BURAYA:
 ```
 ## Kategori Arka Planı Değiştirme
 
+**fragment_categories.xml** dosyasında resimde görülen alanı değiştirmeniz yeterlidir.
+
+![12](https://user-images.githubusercontent.com/25686023/42723853-df63b166-876f-11e8-87b0-50d1f61ce72d.png)
+
 # Alt Menüyü Değiştirme
 
 **bottomnavigation_menu.xml** Dosyasından Alt Menüyü değiştirebiliriz.
@@ -123,6 +127,18 @@ case R.id.ana_sayfa:
 **strings.xml** dosyası içinden istediğiniz şekilde değişiklik yapabilirsiniz.
 
 # Splash Screen Görüntüsünü Değiştirme/Kaldırma
+
+### Splash Screen Görüntüsünü Değiştirmek 
+
+Splash screen görüntüsünü değiştirmek için **splash_screen.xml** dosyasını açıp aşağıdaki resimdeki alana resmi eklemeniz yeterlidir.
+
+![10](https://user-images.githubusercontent.com/25686023/42723808-a236c644-876e-11e8-817a-ee683805c712.png)
+
+### Splash Screen Görüntüsünü Kaldırmak
+
+**MainActivity.java** dosyası içindeki resimde görülen alanı silmeniz yeterlidir.
+
+![11](https://user-images.githubusercontent.com/25686023/42723828-2faa5568-876f-11e8-9307-418927b6eaee.png)
 
 # Uygulamaya Logo Eklemek
 
