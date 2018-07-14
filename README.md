@@ -161,3 +161,9 @@ Renkleri değiştirmek için **colors.xml** dosyasındaki renkleri değiştirmen
 ![5](https://user-images.githubusercontent.com/25686023/42723666-d65689ea-876a-11e8-9f7c-e5ac68a903b6.png)
 
 # One Signal Ayarlarını Yapma
+
+![15](https://user-images.githubusercontent.com/25686023/42723912-3d44b8f6-8771-11e8-8685-c659fd939002.png)
+
+Resimde gördüğünüz dosyayı açtıktan sonra aşağıdaki resimdeki işaretli alanları doldurmanız yeterlidir.
+
+![14](https://user-images.githubusercontent.com/25686023/42723910-3d26dbec-8771-11e8-9357-34bf29d6dd9e.png)
