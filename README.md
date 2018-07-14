@@ -1,6 +1,5 @@
-```
-```
 # İçerik
+---
 - [Ana Sayfa Link Değiştirme](#ana-sayfa-link-değiştirme)
 - [Kategori Menüsü Değiştirme](#kategori-menüsü-değiştirme)
 
@@ -60,4 +59,41 @@ case R.id.ID_BURAYA:
     break;
 ```
 
+# Alt Menüyü Değiştirme
+
+**bottomnavigation_menu.xml** Dosyasından Alt Menüyü değiştirebiliriz.
+
+- Örnek Menü Ekleme:
+```xml
+<item
+    android:title=“BAŞLIK BURAYA“
+    android:id="@+id/ID BURAYA“
+    android:icon="@drawable/RESIM BURAYA“
+    app:showAsAction="always"/>
+```
+
+<p><b>BURAYA ID</b> yazan kısıma başlığa uygun bir id yazın.</p>
+<p><b>BURAYA BAŞLIK</b> yazan kısıma istediğiniz başlığı yazın.</p>
+<p><b>BURAYA RESIM</b> yazan kısma drawable dosyasındaki iconun adını yazın.</p>
+
+Daha sonrasında 
+
+![3](https://user-images.githubusercontent.com/25686023/42723528-1377fffa-8768-11e8-9007-ec4243e2ace7.png)
+
+**MainActivity.java** içerisindeki resimdeki alana menü itemlarınıza göre değiştirin. Örneğin:
+
+```xml
+<item
+    android:title="@string/ana_sayfa"
+    android:id="@+id/ana_sayfa”
+    android:icon="@drawable/ic_home_black_24dp"
+    app:showAsAction="always"/>
+```
+Itemı için aşağıdaki eklemeyi yapmanız gerekir.
+
+```java
+case R.id.ana_sayfa:
+    fragmentClass=MainPage.class;
+    break;
+```
 
