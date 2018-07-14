@@ -1,7 +1,13 @@
 # İçerik
 
+- [Nasıl İndirilir ve Kurulum Yapılır](#Nasıl-indirilir-ve-kurulum-yapılır)
 - [Ana Sayfa Link Değiştirme](#ana-sayfa-link-değiştirme)
 - [Kategori Menüsü Değiştirme](#kategori-menüsü-değiştirme)
+  - [Kategori Arka Planı Değiştirme](#download-sources)
+- [Alt Menüyü Değiştirme](#alt-menüyü-değiştirme)
+
+# Nasıl İndirilir ve Kurulum Yapılır
+
 
 # Ana Sayfa Link Değiştirme
 
@@ -36,8 +42,8 @@ Menü arası ayıraç olmadan
 <p><b>BURAYA ID</b> yazan kısıma başlığa uygun bir id yazın.</p>
 <p><b>BURAYA BAŞLIK</b> yazan kısıma istediğiniz başlığı yazın.</p>
 <p><b>BURAYA RESIM</b> yazan kısma drawable dosyasındaki iconun adını yazın.</p>
+<p></p>
 
-**categories.java**
 ![2](https://user-images.githubusercontent.com/25686023/42708601-7ed5389e-86e6-11e8-938a-bd0201d86296.png)
 
 **navigation.menu.xml** dosyasından eklemeleri yaptıktan sonra **categories.java** dosyasındaki resimdeki alanı menü itemlarınıza göre değiştirin. Örneğin:
@@ -58,6 +64,8 @@ case R.id.ID_BURAYA:
     webviewSetup(“<ISTEDIGINIZ LINK>“);
     break;
 ```
+## Kategori Arka Planı Değiştirme
+
 ---
 # Alt Menüyü Değiştirme
 
@@ -98,3 +106,13 @@ case R.id.ana_sayfa:
 ```
 ---
 
+# Uygulama Yazılarını Değiştirme
+
+**strings.xml** dosyası içinden istediğiniz şekilde değişiklik yapabilirsiniz.
+
+# Splash Screen Görüntüsünü Değiştirme/Kaldırma
+
+# Uygulama Logosu Eklemek
+
+# Ayarlar Menüsünü Değiştirmek
+[Bu](https://github.com/jrvansuita/MaterialAbout) linke tıklayarak detaylı bilgi alabilirsiniz. Kullanımı çok basittir.
