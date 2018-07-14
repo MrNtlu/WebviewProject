@@ -1,31 +1,19 @@
-package com.zeniwork.bankaciyim;
+package com.mrntlu.webviewproject;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.DownloadListener;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-import es.dmoral.toasty.Toasty;
 
 
 public class Categories extends Fragment {
@@ -75,28 +63,28 @@ public class Categories extends Fragment {
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.bank_news:
-                        webviewSetup("https://www.bankaciyim.net/haberler/gundem");
+                        webviewSetup("https://www.webviewproject.net/haberler/gundem");
                         break;
                     case R.id.economy:
-                        webviewSetup("https://www.bankaciyim.net/haberler/ekonomi");
+                        webviewSetup("https://www.webviewproject.net/haberler/ekonomi");
                         break;
                     case R.id.credits:
-                        webviewSetup("https://www.bankaciyim.net/haberler/banka-kredileri");
+                        webviewSetup("https://www.webviewproject.net/haberler/banka-kredileri");
                         break;
                     case R.id.carreer:
-                        webviewSetup("https://www.bankaciyim.net/haberler/kariyer");
+                        webviewSetup("https://www.webviewproject.net/haberler/kariyer");
                         break;
                     case R.id.pano:
-                        webviewSetup("https://www.bankaciyim.net/haberler/pano");
+                        webviewSetup("https://www.webviewproject.net/haberler/pano");
                         break;
                     case R.id.bank_hire:
-                        webviewSetup("https://www.bankaciyim.net/haberler/banka-personel-alimlari");
+                        webviewSetup("https://www.webviewproject.net/haberler/banka-personel-alimlari");
                         break;
                     case R.id.kamu_hire:
-                        webviewSetup("https://www.bankaciyim.net/haberler/kamu-is-ilanlari");
+                        webviewSetup("https://www.webviewproject.net/haberler/kamu-is-ilanlari");
                         break;
                     case R.id.other_hire:
-                        webviewSetup("https://www.bankaciyim.net/haberler/diger-is-ilanlari");
+                        webviewSetup("https://www.webviewproject.net/haberler/diger-is-ilanlari");
                         break;
                 }
                 return true;

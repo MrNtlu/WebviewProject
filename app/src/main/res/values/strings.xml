@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">Bankaciyim</string>
+    <string name="app_name">Webview Project</string>
     <string name="kategoriler">Kategoriler</string>
     <string name="ana_sayfa">Ana Sayfa</string>
     <string name="ayarlar">Ayarlar</string>
+    <string name="emin_misin">Emin Misiniz?</string>
+    <string name="cikmak_istiyor_musun">Çıkmak İstiyor Musunuz?</string>
+    <string name="evet">Evet</string>
+    <string name="hayir">HAYIR!</string>
+    <string name="baglanti_basarili">Bağlantı Başarılı.</string>
+    <string name="baglanti_basarisiz">Bağlantı Başarısız!</string>
 </resources>

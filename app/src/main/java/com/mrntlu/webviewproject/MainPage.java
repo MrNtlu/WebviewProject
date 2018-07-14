@@ -1,21 +1,13 @@
-package com.zeniwork.bankaciyim;
+package com.mrntlu.webviewproject;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.DownloadListener;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.google.android.gms.ads.AdRequest;
@@ -24,7 +16,7 @@ import com.google.android.gms.ads.AdView;
 
 public class MainPage extends Fragment {
 
-    private final String web_url="http://www.bankaciyim.net/";
+    private final String web_url="<WEBSITE LINKI>";
     WebView webView;
     AdView adView;
     static WebView webViewCopy;

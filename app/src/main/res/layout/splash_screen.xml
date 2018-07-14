@@ -2,8 +2,9 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/splash_screen"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent">
+    <!--Background yerine splash screen resmi ekleyin-->
 
 
 </RelativeLayout>

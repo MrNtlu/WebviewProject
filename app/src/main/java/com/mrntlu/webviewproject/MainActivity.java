@@ -1,4 +1,4 @@
-package com.zeniwork.bankaciyim;
+package com.mrntlu.webviewproject;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -19,8 +19,6 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.onesignal.OneSignal;
 
 import es.dmoral.toasty.Toasty;
@@ -43,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle("Emin Misiniz?");
-                        builder.setMessage("Çıkmak İstiyor Musunuz?");
-                        builder.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
+                        builder.setTitle(R.string.emin_misin);
+                        builder.setMessage(R.string.cikmak_istiyor_musun);
+                        builder.setPositiveButton(R.string.evet, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 finish();
                             }
                         });
-                        builder.setNegativeButton("HAYIR!", new DialogInterface.OnClickListener() {
+                        builder.setNegativeButton(R.string.hayir, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
@@ -77,11 +75,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (isNetworkAvailable()){
-                    Toasty.success(context,"Bağlantı Başarılı.", Toast.LENGTH_LONG).show();
+                    Toasty.success(context,getString(R.string.baglanti_basarili), Toast.LENGTH_LONG).show();
                     return;
                 }
                 else{
-                    Toasty.error(context,"Bağlantı Başarısız!",Toast.LENGTH_LONG).show();
+                    Toasty.error(context,getString(R.string.baglanti_basarisiz),Toast.LENGTH_LONG).show();
                 }
             }
         };

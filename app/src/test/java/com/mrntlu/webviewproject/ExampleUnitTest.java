@@ -1,4 +1,4 @@
-package com.zeniwork.bankaciyim;
+package com.mrntlu.webviewproject;
 
 import org.junit.Test;
 

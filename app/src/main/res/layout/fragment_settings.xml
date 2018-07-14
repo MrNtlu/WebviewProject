@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/settings_background"
-    tools:context=".Settings">
+    tools:context="com.mrntlu.webviewproject.Settings">
 
     <com.vansuita.materialabout.views.AboutView
         android:layout_width="match_parent"

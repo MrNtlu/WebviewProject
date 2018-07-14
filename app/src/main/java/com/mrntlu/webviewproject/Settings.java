@@ -1,4 +1,4 @@
-package com.zeniwork.bankaciyim;
+package com.mrntlu.webviewproject;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -31,20 +31,20 @@ public class Settings extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //TODO CHANGE THEM
         AboutView aboutView = AboutBuilder.with(getContext())
-                .setPhoto(R.drawable.bankaciyim_logo)
-                .setCover(R.drawable.banner1)
+                .setPhoto(R.mipmap.ic_launcher)
+                .setCover(R.color.backgroundWhite)
                 .setName("Bankaciyim.Net")
                 .setSubTitle("Türkiye’nin En Büyük Bankacı Platformu")
                 .setAppIcon(R.mipmap.ic_launcher)
                 .setAppName(R.string.app_name)
                 .addFacebookLink("bankaciyimnet")
-                .addTwitterLink("bankaciyim")
-                .addInstagramLink("bankaciyim")
+                .addTwitterLink("webviewproject")
+                .addInstagramLink("webviewproject")
                 .addYoutubeChannelLink("https://www.youtube.com")
                 .addGooglePlusLink("https://www.googleplus.com")
                 .addFiveStarsAction()
                 .setVersionNameAsAppSubTitle()
-                .addFeedbackAction("https://www.bankaciyim.net/iletisim")
+                .addFeedbackAction("https://www.webviewproject.net/iletisim")
                 .addShareAction(R.string.app_name)
                 .setWrapScrollView(true)
                 .setLinksAnimated(true)
