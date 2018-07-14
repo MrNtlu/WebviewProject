@@ -9,9 +9,19 @@
 - [Splash Screen Görüntüsünü Değiştirme/Kaldırma](#splash-screen-görüntüsünü-değiştirmekaldırma)
 - [Uygulamaya Logo Eklemek](#uygulamaya-logo-eklemek)
 - [Ayarlar Menüsünü Değiştirmek](#ayarlar-menüsünü-değiştirmek)
-- [ADMOB Ekleme](#)
-- [Renkleri Değiştirme](#)
-- [One Signal Ayarlarını Yapma](#)
+- [ADMOB Ekleme](#admob-ekleme)
+- [Renkleri Değiştirme](#renkleri-değiştirme)
+- [One Signal Ayarlarını Yapma](#one-signal-ayarlarını-yapma)
+
+# Nasıl İndirilir ve Kurulum Yapılır
+
+![6](https://user-images.githubusercontent.com/25686023/42723706-d4dbb828-876b-11e8-91d5-0a138411ea1b.png)
+
+Resimdeki butona bastıp projeyi indirin. Daha sonrasında Android Studio açıp aşağıdaki resimde görülen butona basın.
+
+![7](https://user-images.githubusercontent.com/25686023/42723716-308b9008-876c-11e8-8611-6fdcb4cd30f9.png)
+
+Daha sonra indirdiğiniz dosyayı bulup onu seçmeniz yeterlidir.
 
 # Ana Sayfa Link Değiştirme
 
