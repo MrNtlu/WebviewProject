@@ -1,5 +1,5 @@
 # İçerik
----
+
 - [Ana Sayfa Link Değiştirme](#ana-sayfa-link-değiştirme)
 - [Kategori Menüsü Değiştirme](#kategori-menüsü-değiştirme)
 
@@ -8,7 +8,7 @@
 ![1](https://user-images.githubusercontent.com/25686023/42708450-089716ac-86e6-11e8-92a0-e5fcd5818c01.png)
 
 ```web_url="<WEBSITE LINKI>``` kısmına websitesi adresinizi yazınız.
-
+---
 # Kategori Menüsü Değiştirme
 
 **navigation_menu.xml** Dosyasından Kategori menüsündeki menüleri değiştirebilirsiniz. Örnek menü ekleme yöntemleri:
@@ -58,7 +58,7 @@ case R.id.ID_BURAYA:
     webviewSetup(“<ISTEDIGINIZ LINK>“);
     break;
 ```
-
+---
 # Alt Menüyü Değiştirme
 
 **bottomnavigation_menu.xml** Dosyasından Alt Menüyü değiştirebiliriz.
@@ -96,4 +96,5 @@ case R.id.ana_sayfa:
     fragmentClass=MainPage.class;
     break;
 ```
+---
 
