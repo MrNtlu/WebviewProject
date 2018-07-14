@@ -1,20 +1,24 @@
 # İçerik
 
-- [Nasıl İndirilir ve Kurulum Yapılır](#Nasıl-indirilir-ve-kurulum-yapılır)
+- [Nasıl İndirilir ve Kurulum Yapılır](#nasıl-İndirilir-ve-kurulum-yapılır)
 - [Ana Sayfa Link Değiştirme](#ana-sayfa-link-değiştirme)
 - [Kategori Menüsü Değiştirme](#kategori-menüsü-değiştirme)
-  - [Kategori Arka Planı Değiştirme](#download-sources)
+  - [Kategori Arka Planı Değiştirme](#kategori-arka-planı-değiştirme)
 - [Alt Menüyü Değiştirme](#alt-menüyü-değiştirme)
-
-# Nasıl İndirilir ve Kurulum Yapılır
-
+- [Uygulama Yazılarını Değiştirme](#uygulama-yazılarını-değiştirme)
+- [Splash Screen Görüntüsünü Değiştirme/Kaldırma](#splash-screen-görüntüsünü-değiştirmekaldırma)
+- [Uygulamaya Logo Eklemek](#uygulamaya-logo-eklemek)
+- [Ayarlar Menüsünü Değiştirmek](#ayarlar-menüsünü-değiştirmek)
+- [ADMOB Ekleme](#)
+- [Renkleri Değiştirme](#)
+- [One Signal Ayarlarını Yapma](#)
 
 # Ana Sayfa Link Değiştirme
 
 ![1](https://user-images.githubusercontent.com/25686023/42708450-089716ac-86e6-11e8-92a0-e5fcd5818c01.png)
 
 ```web_url="<WEBSITE LINKI>``` kısmına websitesi adresinizi yazınız.
----
+
 # Kategori Menüsü Değiştirme
 
 **navigation_menu.xml** Dosyasından Kategori menüsündeki menüleri değiştirebilirsiniz. Örnek menü ekleme yöntemleri:
@@ -66,7 +70,6 @@ case R.id.ID_BURAYA:
 ```
 ## Kategori Arka Planı Değiştirme
 
----
 # Alt Menüyü Değiştirme
 
 **bottomnavigation_menu.xml** Dosyasından Alt Menüyü değiştirebiliriz.
@@ -104,7 +107,6 @@ case R.id.ana_sayfa:
     fragmentClass=MainPage.class;
     break;
 ```
----
 
 # Uygulama Yazılarını Değiştirme
 
@@ -112,7 +114,24 @@ case R.id.ana_sayfa:
 
 # Splash Screen Görüntüsünü Değiştirme/Kaldırma
 
-# Uygulama Logosu Eklemek
+# Uygulamaya Logo Eklemek
+
+[Bu linkteki](https://www.youtube.com/watch?v=5Y4plQv8c4s) videoyu izleyerek hızlı bir şekilde değişikliklerinizi yapabilirsiniz.
 
 # Ayarlar Menüsünü Değiştirmek
 [Bu](https://github.com/jrvansuita/MaterialAbout) linke tıklayarak detaylı bilgi alabilirsiniz. Kullanımı çok basittir.
+
+# ADMOB Ekleme
+<p><b>fragment_mainpage_fragment.xml</p>
+<p>fragment_categories.xml</p></b>
+Dosyalarında bulunan resimdeki yerleri Admob ID'niz ile değiştirin.
+
+![4](https://user-images.githubusercontent.com/25686023/42723640-8a5b6e8e-876a-11e8-9e35-3457e4200ff0.png)
+
+# Renkleri Değiştirme
+
+Renkleri değiştirmek için **colors.xml** dosyasındaki renkleri değiştirmeniz yeterlidir.
+
+![5](https://user-images.githubusercontent.com/25686023/42723666-d65689ea-876a-11e8-9f7c-e5ac68a903b6.png)
+
+# One Signal Ayarlarını Yapma
