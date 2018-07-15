@@ -12,6 +12,8 @@
 - [ADMOB Ekleme](#admob-ekleme)
 - [Renkleri Değiştirme](#renkleri-değiştirme)
 - [One Signal Ayarlarını Yapma](#one-signal-ayarlarını-yapma)
+- [Toolbar Ayarları](#toolbar-ayarları)
+- [Toolbar Kaldırma](#toolbar-kaldırma)
 
 # Nasıl İndirilir ve Kurulum Yapılır
 
@@ -167,3 +169,25 @@ Renkleri değiştirmek için **colors.xml** dosyasındaki renkleri değiştirmen
 Resimde gördüğünüz dosyayı açtıktan sonra aşağıdaki resimdeki işaretli alanları doldurmanız yeterlidir.
 
 ![14](https://user-images.githubusercontent.com/25686023/42723910-3d26dbec-8771-11e8-9357-34bf29d6dd9e.png)
+
+# Toolbar Ayarları
+
+**MainActivity.java** içerisindeki resimde görülen kod toolbar ayarlarının olduğu yerdir.
+
+![screenshot_1](https://user-images.githubusercontent.com/25686023/42734633-12b251d6-8850-11e8-9201-a7fb5785a72f.png)
+
+```toolbar.setLogo(<BURAYA LOGO>);``` **BURAYA LOGO** yazan yere resmi eklemeniz yeterlidir. Örneğin, ```toolbar.setLogo(R.drawable.logo);```
+
+```toolbar.setTitleTextColor(getResources().getColor(R.color.<SENIN RENGIN>));``` **SENIN RENGIN** yazan yere **colors.xml** dosyasından renk ekledikten sonra o rengin ismini yazmanız yeterlidir bu sayede Toolbar'daki **Başlığın rengi** değişecektir.
+
+```toolbar.setElevation(2);``` setElevation methodu Toolbar'ın altındaki gölgeyi bize verir. 0 yazarsanız gölge ortadan kalkacaktır. Sayı arttıkça gölge de artacaktır.
+
+# Toolbar Kaldırma
+
+![s2](https://user-images.githubusercontent.com/25686023/42734691-fb13aed4-8850-11e8-9793-8846c5bee218.png)
+
+Toolbarı kaldırmak için ***MainActivity.java** içerisinde yukarıdaki resimde görülen ```addToolbar();``` silin. Daha sonrasında **activity_main.xml** içinde aşağıdaki resimde görülen alanı kaldırmanız yeterlidir.
+
+![s3](https://user-images.githubusercontent.com/25686023/42734706-480357e4-8851-11e8-8beb-53f603d97ffc.png)
+
+
