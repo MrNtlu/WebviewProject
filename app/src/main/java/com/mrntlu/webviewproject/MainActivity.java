@@ -15,6 +15,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     BroadcastReceiver broadcastReceiver;
 
+    //TODO Back button functionality
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
@@ -63,18 +65,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService( CONNECTIVITY_SERVICE );
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
+    //TODO Checks internet state if there is no internet warning pops up
     private void checkInternet(){
         IntentFilter intentFilter=new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
         broadcastReceiver=new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                if (isNetworkAvailable()){
+                if (WebviewInits.isNetworkAvailable(getBaseContext())){
                     Toasty.success(context,getString(R.string.baglanti_basarili), Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -96,8 +93,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FragmentManager fragmentManager=getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame_layout, MainPage.newInstance()).commit();
-        showSplash();
-        checkInternet();
+        showSplash();//TODO Delete if you don't want splash screen
+        checkInternet();//TODO Delete if you don't want internet control
+        addToolbar();//TODO Adds toolbar to the project
+        //TODO If you don't want toolbar delete it from activity.xml and here
+
         bottomNavigationView=(BottomNavigationView)findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -109,6 +109,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //TODO Adds Toolbar
+    void addToolbar(){
+        Toolbar toolbar=(Toolbar)findViewById(R.id.main_toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.backgroundWhite));//TODO Title color of toolbar
+        toolbar.setLogo(R.mipmap.ic_launcher);//TODO Logo of toolbar
+        toolbar.setElevation(2);//TODO Shadow under the toolbar
+    }
+
+    //TODO Bottom Navigation Menu Items
     void selectItem(MenuItem menuItem){
         Fragment fragment=null;
         Class fragmentClass;
@@ -137,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle(menuItem.getTitle());
     }
 
+    //TODO SplashScreen Method
     void showSplash(){
         splashScreenDialog=new Dialog(this,android.R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen);
         splashScreenDialog.setContentView(R.layout.splash_screen);

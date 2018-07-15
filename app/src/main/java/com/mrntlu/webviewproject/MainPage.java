@@ -15,7 +15,7 @@ import com.google.android.gms.ads.AdView;
 
 
 public class MainPage extends Fragment {
-
+    //TODO Website Link
     private final String web_url="<WEBSITE LINKI>";
     WebView webView;
     AdView adView;
@@ -32,10 +32,6 @@ public class MainPage extends Fragment {
 
     public static WebView getWebView() {
         return webViewCopy;
-    }
-
-    public static void setWeb(String url){
-        webViewCopy.loadUrl(url);
     }
 
     @Override

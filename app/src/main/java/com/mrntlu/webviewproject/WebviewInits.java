@@ -5,11 +5,14 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.webkit.DownloadListener;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
@@ -35,6 +38,7 @@ public class WebviewInits {
         webView.getSettings().setAppCacheEnabled(true);
         webView.getSettings().setSavePassword(true);
         webView.getSettings().setSaveFormData(true);
+        offlineLoad();//TODO Delete if you don't want offline load
 
         webView.setDownloadListener(new DownloadListener() {
             @Override
@@ -96,4 +100,25 @@ public class WebviewInits {
         });        webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
     }
+
+    //TODO Offline Cache Load
+    public void offlineLoad(){
+        webView.getSettings().setAppCacheMaxSize( 5 * 1024 * 1024 ); // 5MB Size of storage that it will take
+        webView.getSettings().setAppCachePath( context.getApplicationContext().getCacheDir().getAbsolutePath() );
+        webView.getSettings().setAllowFileAccess( true );
+        webView.getSettings().setAppCacheEnabled( true );
+        webView.getSettings().setCacheMode( WebSettings.LOAD_DEFAULT ); // load online by default
+
+        if ( !WebviewInits.isNetworkAvailable(context) ) { // loading offline
+            webView.getSettings().setCacheMode( WebSettings.LOAD_CACHE_ELSE_NETWORK );
+        }
+    }
+
+    //TODO Checks if network available or not
+    public static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService( context.CONNECTIVITY_SERVICE );
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }

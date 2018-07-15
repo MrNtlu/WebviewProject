@@ -58,33 +58,34 @@ public class Categories extends Fragment {
         webviewInits.initWeb();
         registerForContextMenu(webView);
 
+        //TODO Categories Menu Items
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.bank_news:
-                        webviewSetup("https://www.webviewproject.net/haberler/gundem");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.economy:
-                        webviewSetup("https://www.webviewproject.net/haberler/ekonomi");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.credits:
-                        webviewSetup("https://www.webviewproject.net/haberler/banka-kredileri");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.carreer:
-                        webviewSetup("https://www.webviewproject.net/haberler/kariyer");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.pano:
-                        webviewSetup("https://www.webviewproject.net/haberler/pano");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.bank_hire:
-                        webviewSetup("https://www.webviewproject.net/haberler/banka-personel-alimlari");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.kamu_hire:
-                        webviewSetup("https://www.webviewproject.net/haberler/kamu-is-ilanlari");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                     case R.id.other_hire:
-                        webviewSetup("https://www.webviewproject.net/haberler/diger-is-ilanlari");
+                        webviewSetup("<LINK BURAYA>");
                         break;
                 }
                 return true;
