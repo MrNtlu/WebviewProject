@@ -156,6 +156,10 @@ Dosyalarında bulunan resimdeki yerleri Admob ID'niz ile değiştirin.
 
 ![4](https://user-images.githubusercontent.com/25686023/42723640-8a5b6e8e-876a-11e8-9e35-3457e4200ff0.png)
 
+<b><p>AndroidManifest.xml</b></p>
+AndroidManifest.xml içinde gösterilen alana da Admob Uygulama ID'nizi ekleyin.
+![image](https://user-images.githubusercontent.com/25686023/72832843-b2c16080-3c96-11ea-97dc-050aa07313bc.png)
+
 # Renkleri Değiştirme
 
 Renkleri değiştirmek için **colors.xml** dosyasındaki renkleri değiştirmeniz yeterlidir.
