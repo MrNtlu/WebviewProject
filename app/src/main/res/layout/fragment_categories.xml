@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.mrntlu.webviewproject.Categories">
 
-    <android.support.design.widget.NavigationView
+    <com.google.android.material.navigation.NavigationView
         android:id="@+id/full_nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +23,7 @@
         app:itemTextColor="@color/colorPrimary"
         app:menu="@menu/navigation_menu" />
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh_categories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar
         android:id="@+id/categories_progress"

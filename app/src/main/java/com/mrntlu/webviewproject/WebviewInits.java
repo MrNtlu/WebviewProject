@@ -6,9 +6,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import android.os.Build;
 import android.view.View;
 import android.webkit.DownloadListener;
 import android.webkit.WebResourceRequest;
@@ -17,21 +19,21 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-public class WebviewInits {
+class WebviewInits {
 
-    WebView webView;
-    SwipeRefreshLayout swipeRefreshLayout;
-    ProgressBar progressBar;
-    Context context;
+    private WebView webView;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private ProgressBar progressBar;
+    private Context context;
 
-    public WebviewInits(WebView webView, SwipeRefreshLayout swipeRefreshLayout, ProgressBar progressBar,Context context) {
+    WebviewInits(WebView webView, SwipeRefreshLayout swipeRefreshLayout, ProgressBar progressBar, Context context) {
         this.webView = webView;
         this.swipeRefreshLayout = swipeRefreshLayout;
         this.progressBar = progressBar;
         this.context=context;
     }
 
-    public void initWeb(){
+    void initWeb(){
         webView.getSettings().setJavaScriptEnabled( true );
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setAppCachePath("caches");
@@ -102,7 +104,7 @@ public class WebviewInits {
     }
 
     //TODO Offline Cache Load
-    public void offlineLoad(){
+    private void offlineLoad(){
         webView.getSettings().setAppCacheMaxSize( 5 * 1024 * 1024 ); // 5MB Size of storage that it will take
         webView.getSettings().setAppCachePath( context.getApplicationContext().getCacheDir().getAbsolutePath() );
         webView.getSettings().setAllowFileAccess( true );
@@ -115,10 +117,28 @@ public class WebviewInits {
     }
 
     //TODO Checks if network available or not
-    public static boolean isNetworkAvailable(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService( context.CONNECTIVITY_SERVICE );
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (connectivityManager!=null) {
+                NetworkCapabilities networkCapabilities=connectivityManager.getNetworkCapabilities(connectivityManager.getActiveNetwork());
+                if (networkCapabilities!=null) {
+                    if (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI))
+                        return true;
+                    else if (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR))
+                        return true;
+                    else
+                        return networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET);
+                } else
+                    return false;
+            }else
+                return false;
+        }else {
+            NetworkInfo activeNetworkInfo = null;
+            if (connectivityManager != null)
+                activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+            return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+        }
     }
 
 }

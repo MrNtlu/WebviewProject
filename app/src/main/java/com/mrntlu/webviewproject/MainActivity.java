@@ -7,15 +7,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Handler;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -33,33 +32,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
-            switch (keyCode) {
-                case KeyEvent.KEYCODE_BACK:
-                    if (MainPage.getWebView().canGoBack()) {
-                        MainPage.getWebView().goBack();
-                    }
-                    else if (Categories.getWebView()!=null && Categories.getWebView().canGoBack()){
-                        Categories.getWebView().goBack();
-                    }
-                    else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle(R.string.emin_misin);
-                        builder.setMessage(R.string.cikmak_istiyor_musun);
-                        builder.setPositiveButton(R.string.evet, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                finish();
-                            }
-                        });
-                        builder.setNegativeButton(R.string.hayir, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                        builder.show();
-                    }
-                    return true;
+            if (keyCode == KeyEvent.KEYCODE_BACK) {
+                Fragment fragment=getSupportFragmentManager().findFragmentById(R.id.frame_layout);
+                if (fragment instanceof FragmentOnBackPressed){
+                    ((FragmentOnBackPressed) fragment).onBackPressed();
+                }else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle(R.string.emin_misin);
+                    builder.setMessage(R.string.cikmak_istiyor_musun);
+                    builder.setPositiveButton(R.string.evet, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton(R.string.hayir, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    builder.show();
+                }
+                return true;
             }
         }
         return super.onKeyDown(keyCode, event);
@@ -98,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
         addToolbar();//TODO Adds toolbar to the project
         //TODO If you don't want toolbar delete it from activity.xml and here
 
-        bottomNavigationView=(BottomNavigationView)findViewById(R.id.bottom_navigation);
+        bottomNavigationView=findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 selectItem(item);
                 return false;
             }
@@ -111,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO Adds Toolbar
     void addToolbar(){
-        Toolbar toolbar=(Toolbar)findViewById(R.id.main_toolbar);
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(getResources().getColor(R.color.backgroundWhite));//TODO Title color of toolbar
         toolbar.setLogo(R.mipmap.ic_launcher);//TODO Logo of toolbar
@@ -120,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO Bottom Navigation Menu Items
     void selectItem(MenuItem menuItem){
-        Fragment fragment=null;
+        Fragment fragment;
         Class fragmentClass;
         switch (menuItem.getItemId()){
             case R.id.main_page:
@@ -132,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.categories:
                 fragmentClass=Categories.class;
                 break;
-
             default:
                 fragmentClass=MainPage.class;
         }
@@ -140,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
             fragment=(Fragment)fragmentClass.newInstance();
         }catch(Exception e){
             e.printStackTrace();
+            fragment=MainPage.newInstance();
         }
         FragmentManager fragmentManager=getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame_layout,fragment).commit();

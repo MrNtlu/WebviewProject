@@ -6,7 +6,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.mrntlu.webviewproject.MainPage">
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/adMob"
@@ -15,13 +15,9 @@
         <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
-            android:id="@+id/myWebview">
+            android:id="@+id/myWebview"/>
 
-        </WebView>
-
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
